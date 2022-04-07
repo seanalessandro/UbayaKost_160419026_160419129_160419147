@@ -21,9 +21,9 @@ class RatingListAdapter (val ratingList:ArrayList<Rating>) : RecyclerView.Adapte
 
     override fun onBindViewHolder(holder: RatingViewHolder, position: Int) {
         holder.view.txtRatingKomentar.text = ratingList[position].komentar
-        holder.view.txtRatingNamaKos.text = ratingList[position].namaKos
+        holder.view.txtRatingNamaKos.text =  ratingList[position].namaKos
         holder.view.txtRatingPemberiRating.text = ratingList[position].pemberiRating
-        holder.view.txtRatingRating.text = ratingList[position].rating
+        holder.view.txtRatingRating.text = "(" +ratingList[position].rating + ")"
     }
 
     override fun getItemCount(): Int {

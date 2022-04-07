@@ -15,6 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="164dp"
+            android:fontFamily="sans-serif-black"
             android:text="Aplikasi UbayaKost"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             app:layout_constraintEnd_toEndOf="parent"
@@ -28,6 +29,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="64dp"
             android:layout_marginEnd="16dp"
+            android:fontFamily="sans-serif-medium"
             android:text="Aplikasi Ubaya Kost adalah aplikasi yang menyediakan sebuah platform menyediakan informasi mengenai kost-kost yang terdapat di sekitar daerah Ubaya."
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
@@ -37,6 +39,7 @@
 
         <Button
             android:id="@+id/btnKetentuan"
+            style="@style/Widget.AppCompat.Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="36dp"
@@ -47,6 +50,7 @@
 
         <Button
             android:id="@+id/btnKeamananData"
+            style="@style/Widget.AppCompat.Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="36dp"
@@ -58,6 +62,7 @@
 
         <Button
             android:id="@+id/btnCredit"
+            style="@style/Widget.AppCompat.Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="56dp"
@@ -68,6 +73,7 @@
 
         <Button
             android:id="@+id/btnDisclaimer"
+            style="@style/Widget.AppCompat.Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
