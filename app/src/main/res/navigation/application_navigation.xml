@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/application_navigation"
+    app:startDestination="@id/itemHome">
+
+    <fragment
+        android:id="@+id/itemHome"
+        android:name="id.ac.ubaya.ubayakost_160419026.view.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/actionKeamananData"
+            app:destination="@id/keamananDataFragment" />
+        <action
+            android:id="@+id/actionKetentuan"
+            app:destination="@id/ketentuanFragment" />
+        <action
+            android:id="@+id/actionCredit"
+            app:destination="@id/creditFragment" />
+        <action
+            android:id="@+id/actionDisclaimer"
+            app:destination="@id/disclaimerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemList"
+        android:name="id.ac.ubaya.ubayakost_160419026.view.ListFragment"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/actionKostDetail"
+            app:destination="@id/kostDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemRating"
+        android:name="id.ac.ubaya.ubayakost_160419026.view.RatingFragment"
+        android:label="fragment_rating"
+        tools:layout="@layout/fragment_rating" />
+    <fragment
+        android:id="@+id/kostDetailFragment"
+        android:name="id.ac.ubaya.ubayakost_160419026.view.KostDetailFragment"
+        android:label="fragment_kost_detail"
+        tools:layout="@layout/fragment_kost_detail" >
+        <argument
+            android:name="kost_id"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/keamananDataFragment"
+        android:name="id.ac.ubaya.ubayakost_160419026.view.KeamananDataFragment"
+        android:label="fragment_keamanan_data"
+        tools:layout="@layout/fragment_keamanan_data" />
+    <fragment
+        android:id="@+id/ketentuanFragment"
+        android:name="id.ac.ubaya.ubayakost_160419026.view.KetentuanFragment"
+        android:label="fragment_ketentuan"
+        tools:layout="@layout/fragment_ketentuan" />
+    <fragment
+        android:id="@+id/creditFragment"
+        android:name="id.ac.ubaya.ubayakost_160419026.view.CreditFragment"
+        android:label="fragment_credit"
+        tools:layout="@layout/fragment_credit" />
+    <fragment
+        android:id="@+id/disclaimerFragment"
+        android:name="id.ac.ubaya.ubayakost_160419026.view.DisclaimerFragment"
+        android:label="fragment_disclaimer"
+        tools:layout="@layout/fragment_disclaimer" />
+</navigation>
