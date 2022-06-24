@@ -39,3 +39,16 @@ data class Rating(
     @PrimaryKey(autoGenerate = true)
     val idRating:Int=0
 }
+
+@Entity
+data class Reviewer(
+    @ColumnInfo(name="namaReviewer")
+    val namaReviewer:String?,
+    @ColumnInfo(name="noHp")
+    val noHp:String?,
+    @ColumnInfo(name="alamat")
+    val alamat:String?,
+){
+    @PrimaryKey(autoGenerate = true)
+    val idReviewer:Int=0
+}
