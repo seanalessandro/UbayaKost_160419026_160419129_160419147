@@ -20,8 +20,6 @@ data class Kost(
     val harga:String?,
     @ColumnInfo(name="urlFoto")
     val urlFoto:String?
-
-
 ){
     @PrimaryKey(autoGenerate = true)
     val idKost:Int=0
