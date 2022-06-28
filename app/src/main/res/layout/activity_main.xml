@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:background="#673AB7"
+        android:background="@drawable/navbar_rounded"
         app:elevation="24dp"
         app:itemIconTint="@color/white"
         app:itemTextColor="@color/white"

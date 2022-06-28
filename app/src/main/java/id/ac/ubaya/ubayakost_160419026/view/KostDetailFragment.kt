@@ -25,7 +25,7 @@ class KostDetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         if(arguments != null){
-            val kostId = KostDetailFragmentArgs.fromBundle(requireArguments()).kostId
+            var kostId = KostDetailFragmentArgs.fromBundle(requireArguments()).kostId
             viewModel = ViewModelProvider(this).get(DetailViewModel::class.java)
             viewModel.fetch(kostId)
         }

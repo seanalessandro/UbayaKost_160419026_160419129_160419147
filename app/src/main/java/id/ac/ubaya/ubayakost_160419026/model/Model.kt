@@ -7,48 +7,63 @@ import androidx.room.PrimaryKey
 @Entity
 data class Kost(
     @ColumnInfo(name="nama")
-    val nama:String?,
+    var nama:String?,
     @ColumnInfo(name="ukuran")
-    val ukuran:String?,
+    var ukuran:String?,
     @ColumnInfo(name="kamarMandi")
-    val kamarMandi:String?,
+    var kamarMandi:String?,
     @ColumnInfo(name="lokasi")
-    val lokasi:String?,
+    var lokasi:String?,
     @ColumnInfo(name="keterangan")
-    val keterangan:String?,
+    var keterangan:String?,
     @ColumnInfo(name="harga")
-    val harga:String?,
+    var harga:String?,
     @ColumnInfo(name="urlFoto")
-    val urlFoto:String?
+    var urlFoto:String?,
+    @ColumnInfo(name="jarak")
+    var jarak:Int?
 ){
     @PrimaryKey(autoGenerate = true)
-    val idKost:Int=0
+    var idKost:Int=0
 }
 
 @Entity
 data class Rating(
     @ColumnInfo(name="namaKos")
-    val namaKos:String?,
+    var namaKos:String?,
     @ColumnInfo(name="pemberiRating")
-    val pemberiRating:String?,
+    var pemberiRating:String?,
     @ColumnInfo(name="rating")
-    val rating:String?,
+    var rating:String?,
     @ColumnInfo(name="komentar")
-    val komentar:String?,
+    var komentar:String?,
 ){
     @PrimaryKey(autoGenerate = true)
-    val idRating:Int=0
+    var idRating:Int=0
 }
 
 @Entity
 data class Reviewer(
     @ColumnInfo(name="namaReviewer")
-    val namaReviewer:String?,
+    var namaReviewer:String?,
     @ColumnInfo(name="noHp")
-    val noHp:String?,
+    var noHp:String?,
     @ColumnInfo(name="alamat")
-    val alamat:String?,
+    var alamat:String?,
 ){
     @PrimaryKey(autoGenerate = true)
-    val idReviewer:Int=0
+    var idReviewer:Int=0
+}
+
+@Entity
+data class User(
+    @ColumnInfo(name="username")
+    var username:String?,
+    @ColumnInfo(name="email")
+    var email:String?,
+    @ColumnInfo(name="password")
+    var password:String?,
+){
+    @PrimaryKey(autoGenerate = true)
+    var idUser:Int=0
 }

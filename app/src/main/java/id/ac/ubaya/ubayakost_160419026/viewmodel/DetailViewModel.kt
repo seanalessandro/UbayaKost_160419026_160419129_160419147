@@ -20,7 +20,7 @@ class DetailViewModel(application: Application): AndroidViewModel(application) {
 
     val tag = "volleyTag"
     private var queue: RequestQueue? = null
-    fun fetch(kostId: String){
+    fun fetch(kostId: Int){
 
         loadingLD.value = true
         kostsLoadErrorLD.value = false
@@ -34,7 +34,7 @@ class DetailViewModel(application: Application): AndroidViewModel(application) {
                 val sType = object : TypeToken<List<Kost>>() {}.type
                 val result = Gson().fromJson<ArrayList<Kost>>(it, sType)
                 for(r in result){
-                    if (r.id == kostId){
+                    if (r.idKost == kostId){
                         kostsLD.value = r
                         loadingLD.value = false
                     }

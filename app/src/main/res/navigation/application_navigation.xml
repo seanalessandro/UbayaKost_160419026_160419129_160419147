@@ -44,7 +44,7 @@
         tools:layout="@layout/fragment_kost_detail" >
         <argument
             android:name="kost_id"
-            app:argType="string" />
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/keamananDataFragment"

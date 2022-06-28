@@ -26,7 +26,7 @@ class KostListAdapter(val kostList:ArrayList<Kost>) : RecyclerView.Adapter<KostL
         holder.view.txtKeteranganKost.text = kostList[position].keterangan
         holder.view.imgKost.loadImage(kostList[position].urlFoto, holder.view.progressBarImgKost)
         holder.view.btnDetailKost.setOnClickListener{
-            val action = ListFragmentDirections.actionKostDetail(kostList[position].id.toString())
+            val action = ListFragmentDirections.actionKostDetail(kostList[position].idKost)
             Navigation.findNavController(it).navigate(action)
         }
 
