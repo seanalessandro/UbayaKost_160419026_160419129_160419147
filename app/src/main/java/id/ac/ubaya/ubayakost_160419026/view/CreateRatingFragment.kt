@@ -29,7 +29,7 @@ class CreateRatingFragment : Fragment() {
             ViewModelProvider(this).get(DetailRatingViewModel::class.java)
 
         btnAddRating.setOnClickListener {
-            var rating = Rating(txtInputNamaPenggunaRating.text.toString(), txtInputNamaKosRating.text.toString(),
+            var rating = Rating(txtInputNamaKosRating.text.toString(), txtInputNamaPenggunaRating.text.toString(),
             txtInputRatingRating.text.toString(), txtInputKomentarRating.text.toString())
             val list = listOf(rating)
             viewModel.addRating(list)
