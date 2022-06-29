@@ -23,25 +23,26 @@
 
             </androidx.recyclerview.widget.RecyclerView>
 
-            <ProgressBar
-                android:id="@+id/progressLoadingRating"
-                style="?android:attr/progressBarStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="@+id/recViewRating"
-                app:layout_constraintEnd_toEndOf="@+id/recViewRating"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
             <TextView
-                android:id="@+id/txtErrorRating"
+                android:id="@+id/txtEmptyRating"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Error saat loading data!"
+                android:text="Data Rating masih kosong, Silahkan diisi terlebih dahulu."
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/recViewRating" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabAddRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="60dp"
+                android:clickable="true"
+                android:src="@drawable/ic_baseline_add_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 </FrameLayout>

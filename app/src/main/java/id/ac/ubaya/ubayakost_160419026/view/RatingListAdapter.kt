@@ -12,7 +12,7 @@ class RatingListAdapter (val ratingList:ArrayList<Rating>) : RecyclerView.Adapte
     class RatingViewHolder(var view: View) :
         RecyclerView.ViewHolder(view)
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RatingListAdapter.RatingViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RatingViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         val view = inflater.inflate(R.layout.rating_list_item, parent, false)
 
@@ -20,10 +20,10 @@ class RatingListAdapter (val ratingList:ArrayList<Rating>) : RecyclerView.Adapte
     }
 
     override fun onBindViewHolder(holder: RatingViewHolder, position: Int) {
-        holder.view.txtRatingKomentar.text = ratingList[position].komentar
-        holder.view.txtRatingNamaKos.text =  ratingList[position].namaKos
-        holder.view.txtRatingPemberiRating.text = ratingList[position].pemberiRating
-        holder.view.txtRatingRating.text = "(" +ratingList[position].rating + ")"
+        holder.view.txtRatingNamaKos.setText(ratingList[position].namaKos.toString())
+        holder.view.txtRatingKomentar.setText(ratingList[position].komentar.toString())
+        holder.view.txtRatingPemberiRating.setText(ratingList[position].pemberiRating.toString())
+        holder.view.txtRatingRating.setText("("+ratingList[position].rating.toString()+")")
     }
 
     override fun getItemCount(): Int {

@@ -39,7 +39,11 @@
         android:id="@+id/itemRating"
         android:name="id.ac.ubaya.ubayakost_160419026.view.RatingFragment"
         android:label="fragment_rating"
-        tools:layout="@layout/fragment_rating" />
+        tools:layout="@layout/fragment_rating" >
+        <action
+            android:id="@+id/actionCreateRating"
+            app:destination="@id/createRatingFragment" />
+    </fragment>
     <fragment
         android:id="@+id/kostDetailFragment"
         android:name="id.ac.ubaya.ubayakost_160419026.view.KostDetailFragment"
@@ -74,4 +78,9 @@
         android:name="id.ac.ubaya.ubayakost_160419026.view.CreateKostFragment"
         android:label="fragment_create_kost"
         tools:layout="@layout/fragment_create_kost" />
+    <fragment
+        android:id="@+id/createRatingFragment"
+        android:name="id.ac.ubaya.ubayakost_160419026.view.CreateRatingFragment"
+        android:label="fragment_create_rating"
+        tools:layout="@layout/fragment_create_rating" />
 </navigation>

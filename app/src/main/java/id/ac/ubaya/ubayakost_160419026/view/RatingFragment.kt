@@ -7,15 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import id.ac.ubaya.ubayakost_160419026.R
-import id.ac.ubaya.ubayakost_160419026.viewmodel.RatingListViewModel
-import kotlinx.android.synthetic.main.fragment_list.*
-import kotlinx.android.synthetic.main.fragment_list.refreshLayout
+import id.ac.ubaya.ubayakost_160419026.viewmodel.ListRatingViewModel
 import kotlinx.android.synthetic.main.fragment_rating.*
 
 class RatingFragment : Fragment() {
-    private lateinit var viewModel: RatingListViewModel
+    private lateinit var viewModel: ListRatingViewModel
     private val ratingListAdapter = RatingListAdapter(arrayListOf())
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,43 +25,27 @@ class RatingFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        viewModel = ViewModelProvider(this).get(RatingListViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(ListRatingViewModel::class.java)
         viewModel.refresh()
 
         recViewRating.layoutManager = LinearLayoutManager(context)
         recViewRating.adapter = ratingListAdapter
 
-        observerViewModel()
-
-        refreshLayout.setOnRefreshListener {
-            recViewRating.visibility = View.GONE
-            txtErrorRating.visibility = View.GONE
-            progressLoadingRating.visibility = View.VISIBLE
-            viewModel.refresh()
-            refreshLayout.isRefreshing = false
+        fabAddRating.setOnClickListener {
+            val action = RatingFragmentDirections.actionCreateRating()
+            Navigation.findNavController(it).navigate(action)
         }
+
+        observerViewModel()
     }
 
     fun observerViewModel(){
-        viewModel.ratingsLD.observe(viewLifecycleOwner, Observer {
+        viewModel.ratingLD.observe(viewLifecycleOwner, Observer {
             ratingListAdapter.updateRatingList(it)
-        })
-
-        viewModel.ratingsLoadErrorLD.observe(viewLifecycleOwner, Observer {
-            if(it == true){
-                txtErrorRating.visibility = View.VISIBLE
+            if(it.isEmpty()) {
+                txtEmptyRating.visibility = View.VISIBLE
             } else {
-                txtErrorRating.visibility = View.GONE
-            }
-        })
-
-        viewModel.loadingLD.observe(viewLifecycleOwner, Observer {
-            if(it == true){
-                recViewRating.visibility = View.GONE
-                progressLoadingRating.visibility = View.VISIBLE
-            } else {
-                recViewRating.visibility = View.VISIBLE
-                progressLoadingRating.visibility = View.GONE
+                txtEmptyRating.visibility = View.GONE
             }
         })
     }
