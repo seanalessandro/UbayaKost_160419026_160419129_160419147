@@ -42,7 +42,7 @@ class ListViewModel(application: Application): AndroidViewModel(application), Co
         }
     }
 
-    fun clearTask(kost: Kost) {
+    fun deleteKost(kost: Kost) {
         launch {
             val db = Room.databaseBuilder(
                 getApplication(),

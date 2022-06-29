@@ -21,6 +21,10 @@ import kotlinx.coroutines.launch
 import kotlin.coroutines.CoroutineContext
 
 class DetailViewModel(application: Application): AndroidViewModel(application), CoroutineScope {
+    val kostDetailLD = MutableLiveData<Kost>()
+    val kostDetailLoadErrorLD = MutableLiveData<Boolean>()
+    val loadingLD = MutableLiveData<Boolean>()
+
     private val job = Job()
 
     fun addKost(list:List<Kost>) {
@@ -31,6 +35,18 @@ class DetailViewModel(application: Application): AndroidViewModel(application), 
             db.kostDao().insertAll(*list.toTypedArray())
         }
     }
+
+    fun refresh(id: Int){
+        launch {
+            val db = Room.databaseBuilder(
+                getApplication(), KostDatabase::class.java,
+                "newkostdb").build()
+
+            kostDetailLD.value = db.kostDao().selectKost(id)
+        }
+    }
+
+
 
     override val coroutineContext: CoroutineContext
         get() = job + Dispatchers.Main
