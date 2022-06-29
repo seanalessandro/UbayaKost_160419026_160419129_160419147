@@ -10,9 +10,8 @@ import id.ac.ubaya.ubayakost_160419026.model.Kost
 import id.ac.ubaya.ubayakost_160419026.util.loadImage
 import kotlinx.android.synthetic.main.kost_list_item.view.*
 
-class KostListAdapter(val kostList:ArrayList<Kost>) : RecyclerView.Adapter<KostListAdapter.KostViewHolder>() {
-    class KostViewHolder(var view: View) :
-            RecyclerView.ViewHolder(view)
+class  KostListAdapter(val kostList:ArrayList<Kost>) : RecyclerView.Adapter<KostListAdapter.KostViewHolder>() {
+    class KostViewHolder(var view: View) : RecyclerView.ViewHolder(view)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): KostViewHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -22,14 +21,10 @@ class KostListAdapter(val kostList:ArrayList<Kost>) : RecyclerView.Adapter<KostL
     }
 
     override fun onBindViewHolder(holder: KostViewHolder, position: Int) {
-        holder.view.txtNamaKost.text = kostList[position].nama
-        holder.view.txtKeteranganKost.text = kostList[position].keterangan
-        holder.view.imgKost.loadImage(kostList[position].urlFoto, holder.view.progressBarImgKost)
-        holder.view.btnDetailKost.setOnClickListener{
-            val action = ListFragmentDirections.actionKostDetail(kostList[position].idKost)
-            Navigation.findNavController(it).navigate(action)
-        }
-
+        holder.view.txtNamaKost.setText(kostList[position].nama.toString())
+        holder.view.txtHarga.setText(kostList[position].harga.toString())
+        holder.view.txtJarak.setText(kostList[position].jarak.toString())
+        holder.view.txtKeteranganKost.setText(kostList[position].keterangan.toString())
     }
 
     override fun getItemCount(): Int {

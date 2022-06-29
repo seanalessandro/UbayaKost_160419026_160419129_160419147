@@ -21,26 +21,4 @@ class KostDetailFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_kost_detail, container, false)
     }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
-        if(arguments != null){
-            var kostId = KostDetailFragmentArgs.fromBundle(requireArguments()).kostId
-            viewModel = ViewModelProvider(this).get(DetailViewModel::class.java)
-            viewModel.fetch(kostId)
-        }
-
-        observeViewModel()
-    }
-
-    fun observeViewModel(){
-        viewModel.kostsLD.observe(viewLifecycleOwner){
-            txtDetailNamaKost.setText(viewModel.kostsLD.value?.nama)
-            txtDetailKamarMandi.setText(viewModel.kostsLD.value?.kamarMandi)
-            txtDetailKeterangan.setText(viewModel.kostsLD.value?.keterangan)
-            txtDetailLokasi.setText(viewModel.kostsLD.value?.lokasi)
-            txtDetailUkuran.setText(viewModel.kostsLD.value?.ukuran)
-            imgDetailKost.loadImage(viewModel.kostsLD.value?.urlFoto, progressLoadingDetail)
-        }
-    }
 }

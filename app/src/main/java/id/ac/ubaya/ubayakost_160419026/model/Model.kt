@@ -21,7 +21,7 @@ data class Kost(
     @ColumnInfo(name="urlFoto")
     var urlFoto:String?,
     @ColumnInfo(name="jarak")
-    var jarak:Int?
+    var jarak:String?
 ){
     @PrimaryKey(autoGenerate = true)
     var idKost:Int=0
