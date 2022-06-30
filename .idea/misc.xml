@@ -16,6 +16,12 @@
         <entry key="..\:/Kuliah/SEMESTER 6/UbayaKost_160419026/app/src/main/res/layout/kost_list_item.xml" value="0.358695652173913" />
         <entry key="..\:/Kuliah/SEMESTER 6/UbayaKost_160419026/app/src/main/res/layout/rating_list_item.xml" value="0.33" />
         <entry key="..\:/Kuliah/SEMESTER 6/UbayaKost_160419026/app/src/main/res/menu/bottom_menu.xml" value="0.3625" />
+        <entry key="..\:/SEMESTER 6/ANMP KP B/UbayaKost_160419026_160419129_160419147/app/src/main/res/layout/fragment_home.xml" value="0.11145833333333334" />
+        <entry key="..\:/SEMESTER 6/ANMP KP B/UbayaKost_160419026_160419129_160419147/app/src/main/res/layout/fragment_kost_detail.xml" value="0.11145833333333334" />
+        <entry key="..\:/SEMESTER 6/ANMP KP B/UbayaKost_160419026_160419129_160419147/app/src/main/res/layout/fragment_list.xml" value="0.11145833333333334" />
+        <entry key="..\:/SEMESTER 6/ANMP KP B/UbayaKost_160419026_160419129_160419147/app/src/main/res/layout/fragment_login.xml" value="0.264" />
+        <entry key="..\:/SEMESTER 6/ANMP KP B/UbayaKost_160419026_160419129_160419147/app/src/main/res/layout/fragment_rating.xml" value="0.11145833333333334" />
+        <entry key="..\:/SEMESTER 6/ANMP KP B/UbayaKost_160419026_160419129_160419147/app/src/main/res/layout/login.xml" value="0.11145833333333334" />
         <entry key="..\:/UbayaKost_160419026_160419129_160419147/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
         <entry key="..\:/UbayaKost_160419026_160419129_160419147/app/src/main/res/layout/fragment_create_kost.xml" value="0.22826086956521738" />
         <entry key="..\:/UbayaKost_160419026_160419129_160419147/app/src/main/res/layout/fragment_create_rating.xml" value="0.22826086956521738" />
