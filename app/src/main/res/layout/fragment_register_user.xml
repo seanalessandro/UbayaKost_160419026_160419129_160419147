@@ -29,9 +29,11 @@
         app:layout_constraintTop_toBottomOf="@+id/textView13">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtUsernameRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Username" />
+            android:hint="Username"
+            android:password="false" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -46,6 +48,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutUsernameRegister">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtEmailRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email" />
@@ -63,9 +66,11 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutEmailRegister">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtPasswordRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password" />
+            android:hint="Password"
+            android:password="true" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -80,13 +85,15 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutPasswordRegister">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtRePasswordRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Re-enter Password" />
+            android:hint="Re-enter Password"
+            android:password="true" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/buttonRegister"
+        android:id="@+id/btnRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Register"

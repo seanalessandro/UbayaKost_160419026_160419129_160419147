@@ -123,13 +123,22 @@
                     android:id="@+id/txtHarga"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
                     android:layout_marginTop="12dp"
                     android:text="@{kost.harga}"
                     android:textColor="@color/orange"
                     android:textSize="10sp"
-                    app:layout_constraintStart_toEndOf="@+id/imgKost"
+                    app:layout_constraintStart_toEndOf="@+id/textView12"
                     app:layout_constraintTop_toBottomOf="@+id/txtJarak" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp."
+                    android:textColor="@color/orange"
+                    android:textSize="10sp"
+                    app:layout_constraintStart_toStartOf="@+id/txtJarak"
+                    app:layout_constraintTop_toTopOf="@+id/txtHarga" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>

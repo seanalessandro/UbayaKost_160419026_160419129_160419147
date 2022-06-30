@@ -43,6 +43,11 @@ class HomeFragment : Fragment() {
             val action = HomeFragmentDirections.actionDisclaimer()
             Navigation.findNavController(it).navigate(action)
         }
+
+        btnUser.setOnClickListener {
+            val action = HomeFragmentDirections.actionListUser()
+            Navigation.findNavController(it).navigate(action)
+        }
     }
 
 }

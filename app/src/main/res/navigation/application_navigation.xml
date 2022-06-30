@@ -22,6 +22,9 @@
         <action
             android:id="@+id/actionDisclaimer"
             app:destination="@id/disclaimerFragment" />
+        <action
+            android:id="@+id/actionListUser"
+            app:destination="@id/userListFragment" />
     </fragment>
     <fragment
         android:id="@+id/itemList"
@@ -83,4 +86,17 @@
         android:name="id.ac.ubaya.ubayakost_160419026.view.CreateRatingFragment"
         android:label="fragment_create_rating"
         tools:layout="@layout/fragment_create_rating" />
+    <fragment
+        android:id="@+id/userListFragment"
+        android:name="id.ac.ubaya.ubayakost_160419026.view.UserListFragment"
+        android:label="fragment_user_list"
+        tools:layout="@layout/fragment_user_list" >
+        <action
+            android:id="@+id/actionRegisterUser"
+            app:destination="@id/registerUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerUserFragment"
+        android:name="id.ac.ubaya.ubayakost_160419026.view.RegisterUserFragment"
+        android:label="RegisterUserFragment" />
 </navigation>
