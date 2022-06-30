@@ -33,7 +33,7 @@ class RegisterUserFragment : Fragment() {
         btnRegister.setOnClickListener {
             if (txtPasswordRegister.text.toString() == txtRePasswordRegister.text.toString())
             {
-                var user = User(txtUsername.text.toString(), txtEmail.text.toString(), txtPasswordRegister.text.toString())
+                var user = User(txtUsernameRegister.text.toString(), txtEmailRegister.text.toString(), txtPasswordRegister.text.toString())
                 val list = listOf(user)
                 viewModel.addUser(list)
                 Toast.makeText(view.context, "Data added", Toast.LENGTH_LONG).show()

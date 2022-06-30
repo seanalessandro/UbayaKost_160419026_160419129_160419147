@@ -8,8 +8,8 @@
     <fragment
         android:id="@+id/itemHome"
         android:name="id.ac.ubaya.ubayakost_160419026.view.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/actionKeamananData"
             app:destination="@id/keamananDataFragment" />
@@ -29,8 +29,8 @@
     <fragment
         android:id="@+id/itemList"
         android:name="id.ac.ubaya.ubayakost_160419026.view.ListFragment"
-        android:label="fragment_list"
-        tools:layout="@layout/fragment_list" >
+        android:label="Daftar Kost"
+        tools:layout="@layout/fragment_list">
         <action
             android:id="@+id/actionKostDetail"
             app:destination="@id/kostDetailFragment" />
@@ -41,8 +41,8 @@
     <fragment
         android:id="@+id/itemRating"
         android:name="id.ac.ubaya.ubayakost_160419026.view.RatingFragment"
-        android:label="fragment_rating"
-        tools:layout="@layout/fragment_rating" >
+        android:label="Daftar Rating"
+        tools:layout="@layout/fragment_rating">
         <action
             android:id="@+id/actionCreateRating"
             app:destination="@id/createRatingFragment" />
@@ -50,8 +50,8 @@
     <fragment
         android:id="@+id/kostDetailFragment"
         android:name="id.ac.ubaya.ubayakost_160419026.view.KostDetailFragment"
-        android:label="fragment_kost_detail"
-        tools:layout="@layout/fragment_kost_detail" >
+        android:label="Detail Kost"
+        tools:layout="@layout/fragment_kost_detail">
         <argument
             android:name="kost_id"
             app:argType="integer" />
@@ -59,38 +59,38 @@
     <fragment
         android:id="@+id/keamananDataFragment"
         android:name="id.ac.ubaya.ubayakost_160419026.view.KeamananDataFragment"
-        android:label="fragment_keamanan_data"
+        android:label="Keamanan Data"
         tools:layout="@layout/fragment_keamanan_data" />
     <fragment
         android:id="@+id/ketentuanFragment"
         android:name="id.ac.ubaya.ubayakost_160419026.view.KetentuanFragment"
-        android:label="fragment_ketentuan"
+        android:label="Ketentuan"
         tools:layout="@layout/fragment_ketentuan" />
     <fragment
         android:id="@+id/creditFragment"
         android:name="id.ac.ubaya.ubayakost_160419026.view.CreditFragment"
-        android:label="fragment_credit"
+        android:label="Credits"
         tools:layout="@layout/fragment_credit" />
     <fragment
         android:id="@+id/disclaimerFragment"
         android:name="id.ac.ubaya.ubayakost_160419026.view.DisclaimerFragment"
-        android:label="fragment_disclaimer"
+        android:label="Disclaimer"
         tools:layout="@layout/fragment_disclaimer" />
     <fragment
         android:id="@+id/createKostFragment"
         android:name="id.ac.ubaya.ubayakost_160419026.view.CreateKostFragment"
-        android:label="fragment_create_kost"
+        android:label="Tambah Kost"
         tools:layout="@layout/fragment_create_kost" />
     <fragment
         android:id="@+id/createRatingFragment"
         android:name="id.ac.ubaya.ubayakost_160419026.view.CreateRatingFragment"
-        android:label="fragment_create_rating"
+        android:label="Tambah Rating"
         tools:layout="@layout/fragment_create_rating" />
     <fragment
         android:id="@+id/userListFragment"
         android:name="id.ac.ubaya.ubayakost_160419026.view.UserListFragment"
-        android:label="fragment_user_list"
-        tools:layout="@layout/fragment_user_list" >
+        android:label="Daftar User"
+        tools:layout="@layout/fragment_user_list">
         <action
             android:id="@+id/actionRegisterUser"
             app:destination="@id/registerUserFragment" />
@@ -98,5 +98,5 @@
     <fragment
         android:id="@+id/registerUserFragment"
         android:name="id.ac.ubaya.ubayakost_160419026.view.RegisterUserFragment"
-        android:label="RegisterUserFragment" />
+        android:label="Tambah User" />
 </navigation>
